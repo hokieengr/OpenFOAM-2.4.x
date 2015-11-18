@@ -59,5 +59,11 @@ boundaryField
         type freestream;
         freestreamValue uniform (200.0 0 0);
     }
+    
+    uav
+    {
+        type fixedValue;
+        value uniform (0 0 0);
+    }
 }
 // ************************************************************************* //
