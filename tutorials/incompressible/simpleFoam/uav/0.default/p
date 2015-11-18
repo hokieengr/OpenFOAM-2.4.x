@@ -1,0 +1,60 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| ========= | |
+| \\ / F ield | OpenFOAM: The Open Source CFD Toolbox |
+| \\ / O peration | Version: 2.3.0 |
+| \\ / A nd | Web: www.OpenFOAM.org |
+| \\/ M anipulation | |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version 2.0;
+    format ascii;
+    class volScalarField;
+    object p;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions [0 2 -2 0 0 0 0]; // kinematic pressure: p/rho
+
+// kinematic pressure = p/rho = 101325 Pa / 1.225 kg/m^3 = 82714.29 m^2/s^2
+internalField uniform 82714.29;
+
+boundaryField
+{
+    inlet
+    {
+        type freestreamPressure;
+    }
+    
+    outlet
+    {
+        type freestreamPressure;
+    }
+    
+    front
+    {
+        type freestreamPressure;
+    }
+    
+    top
+    {
+        type freestreamPressure;
+    }
+    
+    back
+    {
+        type freestreamPressure;
+    }
+    
+    bottom
+    {
+        type freestreamPressure;
+    }
+    
+    uav
+    {
+        type zeroGradient;
+    }
+}
+// ************************************************************************* //
