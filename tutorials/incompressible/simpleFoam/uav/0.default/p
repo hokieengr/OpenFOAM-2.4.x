@@ -17,8 +17,9 @@ FoamFile
 
 dimensions [0 2 -2 0 0 0 0]; // kinematic pressure: p/rho
 
-// kinematic pressure = p/rho = 101325 Pa / 1.225 kg/m^3 = 82714.29 m^2/s^2
-internalField uniform 82714.29;
+// still unclear on this. See User Guide Lid Cavity Driven Flow example. 
+// Long story short: for incompressible flow this doesn't matter so set to 0.
+internalField uniform 0;
 
 boundaryField
 {
