@@ -4,6 +4,8 @@ cd ${0%/*} || exit 1 # run from this directory
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
+# This is required because snappyHexMesh -overwrite will overwrite whatever
+# is already in 0 so we need to reset with known defaults.
 cp -r 0.default 0 > /dev/null 2>&1
 
 runApplication surfaceFeatureExtract
